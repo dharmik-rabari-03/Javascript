@@ -1,5 +1,5 @@
 const a=10
-// a=20 , can't cahnge value 
+// a=20 , can't change value 
 
 
 const b=20
@@ -25,10 +25,5 @@ const Name="Dharmik"
 
 // const Name="Dharmik Ragiya"
 
-
-
-
-
-
-
-
+const Name2={NAME:"Dharmik",age:"18"}
+console.log(Name2)
