@@ -26,4 +26,7 @@ const Name="Dharmik"
 // const Name="Dharmik Ragiya"
 
 const Name2={NAME:"Dharmik",age:"18"}
+Name2.age="19"
+
 console.log(Name2)
+
