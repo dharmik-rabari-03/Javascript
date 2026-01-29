@@ -14,20 +14,16 @@ console.log("After Change Student 2",student2);
 console.log("After Change Student 1",student1);
 
 
-
-
+console.log("    ")
 
 //Shallow copy
 
+let a = 10;
+let b = a;   
 
-let Student1 = {
-  name: "Dharmik",
-  age: 18
-};
+b = 20;
 
-let Student2 = { ...Student1 }; 
+console.log("a =", a); 
+console.log("b =", b); 
 
-Student2.name = "Ragiya";
 
-console.log("Student 1:", Student1); 
-console.log("Student 2:", Student2);
