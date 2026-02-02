@@ -18,6 +18,16 @@ console.log("Exponentiation =", a ** b)
 console.log(" ")//for space
 
 
+// let a = 50
+// let b = 100
+
+// console.log("Addition =", a + b)
+// console.log("Substraction =", a - b)
+// console.log("Multiplication =", a * b)
+// console.log("Division =", a / b)
+// console.log("Modulo =", a % b)
+// console.log("Exponentiation =", a ** b)
+
 //2.Assignment Operator
 
 console.log("2.Assignment Operator ")
@@ -44,6 +54,25 @@ console.log("Modulo and assign A =", a);
 console.log(" ")//for space
 
 
+// a = 20;
+// b = 30;
+
+// a += b;
+// console.log("Add and assign A =", a);
+
+// a -= b;
+// console.log("Subtract and assign A =", a);
+
+// a *= b;
+// console.log("Multiply and assign A =", a);
+
+// a /= b;
+// console.log("Divide and assign A =", a);
+
+// a %= b;
+// console.log("Modulo and assign A =", a);
+
+
 //3.Comparison operator
 
 console.log("3.Comparison operator")
@@ -58,6 +87,9 @@ console.log("Strict Equal to =",A===B)
 
 console.log("Not Equal to =", A != B);
 
+console.log("Not Equal to ,check data type =", A !== B);
+
+
 console.log("Less Than =",A<B)
 
 console.log("Greator Than =",A>B)
@@ -65,6 +97,26 @@ console.log("Greator Than =",A>B)
 console.log("Greator or Equal =",A>=B)
 
 console.log("Less or Equal =",A<=B)
+
+// let A=40
+// let B=30
+
+// console.log("Equal to =",A==B)
+
+// console.log("Strict Equal to =",A===B)
+
+// console.log("Not Equal to =", A != B);
+
+// console.log("Not Equal to ,check data type =", A !== B);
+
+
+// console.log("Less Than =",A<B)
+
+// console.log("Greator Than =",A>B)
+
+// console.log("Greator or Equal =",A>=B)
+
+// console.log("Less or Equal =",A<=B)
 
 console.log(" ")//for space
 
@@ -84,6 +136,16 @@ if(marks1 >=95 &&  marks2 >=80){
     console.log("you have achieve grade A")
 }
 
+
+// let age = 20;
+// let hasID = true;
+
+// if (age >= 18 && hasID) {
+//     console.log("Entry allowed");
+// }
+
+
+
 //OR (||)
 
 let student1=90
@@ -92,6 +154,17 @@ let student2=20
 if(student1>=40 || student2 >= 40){
     console.log("You crack this exam")
 }
+
+
+
+
+// let hasPass = false;
+// let hasPermission = true;
+
+// if (hasPass || hasPermission) {
+//     console.log("You can enter the hall");
+// }
+
 
 
 //NOT (!)
@@ -103,6 +176,13 @@ if(!(Age>=18)){
 }else{
     console.log("you can vote")
 }
+
+
+// let isLoggedIn = false;
+
+// if (!isLoggedIn) {
+//     console.log("Please login first");
+// }
 
 
 console.log(" ") //for space
@@ -119,6 +199,12 @@ const result=(Marks>=33)?"You Pass This Exam":"You Fail This Exam";
 
 console.log(result)
 
+
+// let number = 10;
+
+// let check = (number % 2 === 0) ? "Even Number" : "Odd Number";
+// console.log(check);
+
 console.log(" ") //for space
 
 
@@ -133,6 +219,14 @@ let object={NAME:"Dharmik",Age:"18"}
 console.log(typeof num)
 console.log(typeof str)
 console.log(typeof object)
+
+
+// let arr = [10, 20, 30];
+// let func = function () {};
+
+// console.log(typeof arr);   
+// console.log(typeof func);
+
 console.log(" ") //for space
 
 
@@ -151,7 +245,6 @@ console.log(++y);
 let x = 10;
 console.log(x++); 
 console.log(x);   
-
 
 
 
