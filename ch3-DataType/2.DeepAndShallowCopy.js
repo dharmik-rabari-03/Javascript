@@ -1,4 +1,5 @@
-//deep copy
+//Shallow copy
+
 
 let student1 = { NAME: "Dharmik", AGE: "18" };
 
@@ -16,7 +17,8 @@ console.log("After Change Student 1",student1);
 
 console.log("    ")
 
-//Shallow copy
+//deep copy
+
 
 let a = 10;
 let b = a;   
@@ -25,5 +27,6 @@ b = 20;
 
 console.log("a =", a); 
 console.log("b =", b); 
+
 
 
