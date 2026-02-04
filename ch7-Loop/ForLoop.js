@@ -1,14 +1,15 @@
-let Num=50;
+//Example 1
 
-for(let i=0;i<=Num;i++){
-    console.log(i)
+let Num = 50;
+
+for (let i = 0; i <= Num; i++) {
+  console.log(i);
 }
 
+//Example 2
 
-//another example
+const Arr = ["Apple", "Pineapple", "mango", "cherry", "watermelon", "orange"];
 
-const Arr=["Apple","Pineapple","mango","cherry","watermelon","orange"]
-
-for(let i=0;i<Arr.length;i++){
-    console.log(Arr[i])
+for (let i = 0; i < Arr.length; i++) {
+  console.log(Arr[i]);
 }
