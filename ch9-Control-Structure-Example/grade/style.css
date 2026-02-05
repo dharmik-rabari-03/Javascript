@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%); 
+}
+
+
+
+#form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+}
+#result{
+ font-size: 40px;
+  font-weight: bold;
+  color: transparent;             
+  -webkit-text-stroke: 2px black;
+}
+#mark{
+    margin: 20px;
+}
+#button {
+    margin: 20px;
+}

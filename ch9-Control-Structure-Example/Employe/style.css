@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    /* background: linear-gradient(to right, #2193b0, #6dd5ed); */
+    background: linear-gradient(to right, #43cea2, #185a9d);
+    font-family: Arial, sans-serif;
+
+}
+
+#form {
+    border:8px double  black;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+
+#salary,#HRA,
+#DA,
+#TA,
+#result  {
+    background-color: white;
+    color: black;
+    padding: 7px;
+    font-size: 20px;
+    margin: 15px;
+    border-radius: 7px;
+    border: 3px dotted;
+}
+
+#submit {
+    background: linear-gradient(135deg, #a8e063, #56ab2f);
+    color: black;
+    padding: 7px;
+    font-size: 20px;
+    margin: 15px;
+    border-radius: 7px;
+    border: 2px solid black;
+    
+}
+button:hover {
+    transform: scale(1.05);
+    transition: all 0.5s ease-in-out;
+}
+#result{
+    background: linear-gradient(135deg, #c9ffbf, #ffafbd);
+}
