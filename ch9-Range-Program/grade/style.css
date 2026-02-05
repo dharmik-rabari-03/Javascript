@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+}
+#result{
+   font-size: 60px;
+  font-weight: 600;
+  color: #3b82f6;
+  text-shadow:
+    1px 1px 0 #22c55e,
+    2px 2px 0 #f59e0b;
+}
+#mark{
+    margin: 20px;
+}
+#button {
+    margin: 20px;
+}

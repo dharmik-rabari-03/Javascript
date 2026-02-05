@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+background: #2a8e9b;
+background: linear-gradient(90deg, rgba(42, 142, 155, 1) 0%, rgba(21, 156, 173, 1) 11%, rgba(58, 151, 147, 1) 19%, rgba(69, 169, 142, 1) 30%, rgba(27, 204, 124, 1) 42%, rgba(87, 199, 133, 1) 50%, rgba(116, 203, 123, 1) 60%, rgba(189, 209, 77, 1) 87%, rgba(237, 221, 83, 1) 100%);
+  padding: 40px;
+
+  display: flex;
+  justify-content: center;
+ 
+  
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+#form {
+  margin-bottom: 15px;
+  
+  
+}
+
+label {
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+input {
+  padding: 5px;
+  width: 120px;
+}
+
+button {
+  padding: 6px 12px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+#result {
+  font-weight: bold;
+  margin-top: 10px;
+
+
+}
