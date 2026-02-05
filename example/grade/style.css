@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(96, 201, 201) !important;
+}
+
+
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+}
+#result{
+    color: rgb(7, 5, 5);
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#mark{
+    margin: 20px;
+}
+#button {
+    margin: 20px;
+}
