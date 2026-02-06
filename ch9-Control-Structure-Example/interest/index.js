@@ -17,6 +17,7 @@ document.getElementById("form").addEventListener("submit", (e) => {
 
 
 
-    result.textContent = `Final Amount =₹` + totalAmount;
+    result.textContent = `Final Amount = ₹${totalAmount.toFixed(2)}`;
+
 
 })
