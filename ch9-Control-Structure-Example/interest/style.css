@@ -1,47 +1,47 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-  background-color:#121212;
-color: white;
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+background-image:url(img/55246.png) ;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-#form{
-border: 6px double  rgb(72, 188, 226);
-border-radius: 9px;
-height: 33rem;
-width: 30rem;
-padding: 40px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+#form {
+  border: 6px double black;
+
+  border-radius: 9px;
+  height: 33rem;
+  width: 30rem;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#Amount ,
+#Amount,
 #time,
-#rate{
-    margin: 20px;
-    font-style: oblique;
-    padding: 10px;
-    font-size: 15px;
-
-}
-
-#form label{
+#rate {
+  margin: 20px;
+  font-style: oblique;
+  padding: 10px;
   font-size: 15px;
-  color: #e5e7eb;
+
 }
 
-#form input{
+#form label {
+  font-size: 15px;
+  color: black;
+}
+
+#form input {
   width: 100%;
   padding: 10px 12px;
   margin-top: 6px;
@@ -52,26 +52,47 @@ align-items: center;
   font-size: 15px;
 }
 
-#submit{
+#submit {
   width: 120px;
   padding: 10px;
   border: none;
   border-radius: 6px;
-  background: #38bdf8;
-  color: #000;
+
   font-size: 15px;
   transition: 0.3s;
 }
 
-#submit:hover{
-  background: #0ea5e9;
-}
 
-#result{
+
+#result {
   margin-top: 12px;
   font-size: 18px;
   font-weight: bold;
-  color: #38bdf8;
+ color: black;
+
 }
 
 
+#submit{
+  background-image: linear-gradient(to right, #085078 0%, #85D8CE 51%, #085078 100%)
+}
+
+#submit {
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+#submit:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
