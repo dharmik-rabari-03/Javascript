@@ -15,7 +15,22 @@ body{
     justify-content: center;
     align-items: center;
 }
+#type{
+  margin: 10px;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+
+#result{
+  margin: 10px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .form {
   background-color: white;
   padding: 3.125em;
@@ -86,4 +101,5 @@ body{
   border: 1px dashed #639;
   cursor: pointer;
   transition: 0.5s;
+
 }
