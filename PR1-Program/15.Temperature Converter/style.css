@@ -16,6 +16,13 @@ background-size: cover;
     height: 100vh;
 }
 
+#type{
+  margin: 10px;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 #Result{
     font-size: 20px;
@@ -338,3 +345,4 @@ justify-content: center;
   animation-delay: 1.6s;
   animation-duration: 1.6s;
 }
+
