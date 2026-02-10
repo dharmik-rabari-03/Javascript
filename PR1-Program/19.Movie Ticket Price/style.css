@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+body {
+  background-position: center center;
+  height: 100%;
+  background:
+    conic-gradient(
+        from 0deg at 68.4% 85.35%,
+        #fff0 0 60deg,
+        #38bba7 0 120deg,
+        #159380 0 202.5deg,
+        #fff0 0 360deg
+      )
+      50%/20vmin 25vmin,
+    conic-gradient(
+        from 0deg at 31.6% 85.35%,
+        #fff0 0 157.5deg,
+        #17a18c 0 240deg,
+        #38bba7 0 300deg,
+        #fff0 0 360deg
+      )
+      50%/20vmin 25vmin,
+    conic-gradient(
+        from 0deg at 81.35% 35.5%,
+        #fff0 0 22.75deg,
+        #128070 0 157.25deg,
+        #fff0 0 360deg
+      )
+      50%/20vmin 25vmin,
+    conic-gradient(
+        from 0deg at 18.65% 35.5%,
+        #fff0 0 202.75deg,
+        #01685b 0 337.25deg,
+        #fff0 0 360deg
+      )
+      50%/20vmin 25vmin,
+    conic-gradient(
+        from 0deg at 50% 50%,
+        #fff0 0 60deg,
+        #17a18c 0 157.5deg,
+        #01685b 0 180.1deg,
+        #128070 0 202.5deg,
+        #159380 0 300deg,
+        #fff0 0 360deg
+      )
+      50%/20vmin 25vmin,
+    conic-gradient(
+        from 0deg at 50% 21.15%,
+        #fff0 0 22.5deg,
+        #159380 0 120deg,
+        #38bba7 0 240deg,
+        #17a18c 0 337.5deg,
+        #fff0 0 360deg
+      )
+      50%/20vmin 25vmin,
+    linear-gradient(90deg, #128070 0 50%, #01685b 0 100%) 50%/20vmin 25vmin;
+}
+
+
+#result{
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#form {
+  --input-focus: #2d8cf0;
+  --font-color: #323232;
+  --font-color-sub: #666;
+  --bg-color: beige;
+  --main-color: black;
+  padding: 20px;
+  background: lightblue;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+}
+
+.title {
+  color: var(--font-color);
+  font-weight: 900;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.title span {
+  color: var(--font-color-sub);
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.input {
+  width: 250px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--font-color);
+  padding: 5px 10px;
+  outline: none;
+}
+
+
+.button{
+  margin: 50px auto 0 auto;
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--font-color);
+  cursor: pointer;
+}
