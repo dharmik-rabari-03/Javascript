@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.card {
+    width: 30rem;
+    height: 25rem;
+    background: linear-gradient(145deg, #5f0c9a93, #0e1400c0);
+    border-radius: 14px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.35);
+    border: 1px solid rgba(0, 255, 255, 0.4);
+    color: #f2f9ff;
+    font-family: "Orbitron", sans-serif;
+}
+
+
+.card-header {
+    background: linear-gradient(90deg, #0a84ff, #00c6ff);
+    padding: 16px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #00aaff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+button:hover {
+    background: #0088cc;
+}
+
+#result {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+
+body {
+  width: 100%;
+  height: 100%;
+  --s: 700px; 
+
+  --_g: #dc9d37 25%, #fed450 0 50%, #0000 0;
+  --_l1: #fff 0 1px, #0000 0 calc(25% - 1px), #fff 0 25%;
+  --_l2: #fff 0 1px, #0000 0 calc(50% - 1px), #fff 0 50%;
+  background: repeating-linear-gradient(45deg, var(--_l1)),
+    repeating-linear-gradient(-45deg, var(--_l1)),
+    repeating-linear-gradient(0deg, var(--_l2)),
+    repeating-linear-gradient(90deg, var(--_l2)),
+    conic-gradient(from 135deg at 25% 75%, var(--_g)),
+    conic-gradient(from 225deg at 25% 25%, var(--_g)),
+    conic-gradient(from 45deg at 75% 75%, var(--_g)),
+    conic-gradient(from -45deg at 75% 25%, var(--_g)),
+    repeating-conic-gradient(#125c65 0 45deg, #bc4a33 0 90deg);
+  background-size: var(--s) var(--s);
+}
