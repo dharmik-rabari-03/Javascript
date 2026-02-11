@@ -1,25 +1,25 @@
 1.Even or Odd
 <br>
-live link : https://even0odd.netlify.app/
+live link : https://javascript-orcin-six.vercel.app/
 
 2.Positive \ Negative \ Zero Checker
 <br>
-live link : https://positivenegativezerp.netlify.app/
+live link : https://javascript-146b.vercel.app/
 
 3.Largest Number Finder
 <br>
-live link : https://largest-number-finder.netlify.app/
+live link : https://largest-number-drab.vercel.app/
 
 4.Leap Year Checker
 <br>
-live link : https://leap-year-checker26.netlify.app/
+live link : https://leap-year-rho.vercel.app/
 
 5.Vowel or Consonant
 <br>
-live link : https://rococo-klepon-d63454.netlify.app/
+live link : https://vowel-consonant.vercel.app/
 
 6.Age Eligibility Checker 
-<br>
+<br>  dharmik
 live link : https://wonderful-valkyrie-ce3d17.netlify.app/
 
 7.Factorial Number
