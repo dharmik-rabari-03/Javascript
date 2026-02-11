@@ -19,57 +19,57 @@ live link : https://leap-year-rho.vercel.app/
 live link : https://vowel-consonant.vercel.app/
 
 6.Age Eligibility Checker 
-<br>  dharmik
-live link : https://wonderful-valkyrie-ce3d17.netlify.app/
+<br> 
+live link : https://age-eligibiliti.vercel.app/
 
 7.Factorial Number
 <br>
-live link : https://kaleidoscopic-cassata-8954fa.netlify.app/
+live link : https://factorial-number-nu.vercel.app/
 
 8.Multiplication Table Genertor
 <br>
-live link : https://candid-lokum-07c577.netlify.app/
+live link : https://multi-table.vercel.app/
 
 9.Sum of Digits of a Number
 <br>
-live link: https://incandescent-stroopwafel-3860e3.netlify.app/
+live link: https://sumofdigit.vercel.app/
 
 10.Reverse a Number
 <br>
-live link : https://chimerical-frangipane-f79fb1.netlify.app/
+live link : https://js-project-eta-nine.vercel.app/
 
 11.Palindrome Number Checker
 <br>
-live link : https://spiffy-druid-e4fe2a.netlify.app/
+live link : https://palindrome-inky.vercel.app/
 
 12.Prime Number Checker
 <br>
-live link : https://ephemeral-paprenjak-3deae4.netlify.app/
+live link : https://prime-num.vercel.app/
 
 13.ATM Withdrawal Simulator
 <br>
-live link : https://cool-centaur-b7453d.netlify.app/
+live link : https://atm-withdrawal.vercel.app/
 
 14.Shopping Discount Calculator
 <br>
-live link : https://wonderful-frangipane-96d8df.netlify.app/
+live link : https://shoppingdiscount.vercel.app/
 
 15.Temperature Converter (Celsius ↔ Fahrenheit)
 <br>
-live link : https://spontaneous-dusk-118151.netlify.app/
+live link : https://temp-convert-theta.vercel.app/
 
 16.Currency Converter
 <br>
-live link : https://admirable-halva-0b098b.netlify.app/
+live link : https://currency-convert-fawn.vercel.app/
 
 17.Traffic Signal Simulator
 <br>
-live link : https://chic-yeot-02a812.netlify.app/
+live link : https://trafic-signal-beta.vercel.app/
 
 18.BMI Calculator
 <br>
-live link : https://harmonious-kulfi-8b2a01.netlify.app/
+live link : https://bmi-calculator-sigma-snowy.vercel.app/
 
 19.Movie Ticket Price Calculator
 <br>
-live link : https://rainbow-fox-53fb07.netlify.app/
+live link : https://movie-ticket-rose.vercel.app/
