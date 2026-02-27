@@ -231,7 +231,7 @@ console.log(" ") //for space
 
 
 
-//7.Increment / Decrement
+//7.unary = Increment / Decrement
 
 console.log("7.Increment And Decrement")
 
@@ -245,6 +245,7 @@ console.log(++y);
 let x = 10;
 console.log(x++); 
 console.log(x);   
+
 
 
 
