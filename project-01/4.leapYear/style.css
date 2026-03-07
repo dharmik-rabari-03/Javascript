@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+
+}
+
+body {
+    background-image: url(asset/rm251-mind-15-g.jpg);
+    background-size: cover;
+}
+
+.card {
+    padding: 20px;
+    color: white;
+
+    background: rgb(29, 20, 89);
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+    border: 2px solid black;
+}
+
+#year {
+    border: none;
+    border-radius: 7px;
+    padding: 6px;
+}
+
+
+
+
+.btn-grad {
+    background-image: linear-gradient(to right, #00c6ff 0%, #0072ff 51%, #00c6ff 100%)
+}
+
+.btn-grad {
+    margin: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: rgb(15, 15, 15);
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}

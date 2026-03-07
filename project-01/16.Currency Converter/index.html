@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+<form class="form" id="form">
+    <span class="head">Currency Converter</span>
+
+    <input type="number" placeholder="Enter Money" class="form--input" id="money" required>
+    
+
+
+    <select name="type" id="type">
+        <option value="">Select</option>
+        <option value="DollartoINR">Dollar To INR</option>
+        <option value="INRtoDollar">INR To Dollar</option>
+    </select>
+    
+ 
+    <button class="form--submit">
+        Convert
+    </button>
+
+    <p id="result"></p>
+
+</form>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
