@@ -1,5 +1,4 @@
-document.getElementById("btn").addEventListener("click",
-    async function quotes() {
+document.getElementById("btn").addEventListener("click", async ()=>{
 
 
         try {

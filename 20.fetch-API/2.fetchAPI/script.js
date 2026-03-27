@@ -1,5 +1,4 @@
-document.getElementById("btn").addEventListener("click",
-    async function imges() {
+document.getElementById("btn").addEventListener("click", async ()=>{
         
         const img=document.getElementById("img")
 
