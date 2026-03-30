@@ -25,7 +25,6 @@ CSS
 JavaScript (Fetch API)
 OMDb API
 
-Open index.html
-👨‍💻 Author
 
+👨‍💻 Author
 Dharmik Rabari
