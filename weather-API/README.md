@@ -17,7 +17,7 @@ JavaScript (ES6)
 Fetch API
 Weather API (like OpenWeatherMap)
 
-live link :[ https://weather-api03.netlify.app/](https://weather-api033.netlify.app/)
+live link :https://weather-api033.netlify.app/
 
 📸 Preview
 
