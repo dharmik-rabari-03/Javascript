@@ -3,13 +3,22 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+
+    background-color: #F5E6D3;
+}
 
 .p-list{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 30px;
 }
 .card{
     width: 300px;
+    border-radius: 20px;
+    
+}
+.card img{
+    border-radius: 20px 20px 0px 0px;
 }
