@@ -1,5 +1,5 @@
 
-const products =[
+const products = [
   {
     "id": 1,
     "name": "Wireless Bluetooth Headphones",
@@ -133,7 +133,7 @@ products.forEach(p => {
   <div class="card-body">
     <h5 class="card-title">${p.name}</h5>
     <p class="card-text">₹${p.price}</p>
-    <a href="#" class="btn btn-primary">buy</a>
+    <button class="btn btn-primary" onclick="addToCart(${p.id})">Buy</button>
   </div>
 </div>
 
@@ -142,3 +142,63 @@ products.forEach(p => {
 })
 
 
+function addToCart(id) {
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  let product = products.find(p => p.id === id);
+
+  let existing = cart.find(item => item.id === id);
+
+  if (existing) {
+    existing.quantity += 1;
+  } else {
+    cart.push({ ...product, quantity: 1 });
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+
+}
+
+
+
+function ShowCart() {
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  let tbody = document.getElementById("t-body");
+
+  tbody.innerHTML = "";
+
+
+
+  cart.forEach(item => {
+
+    tbody.innerHTML += `
+      <tr>
+        <td>${item.name}</td>
+        <td>
+        <button class="btn btn-success m-2">+</button>
+
+        ${item.quantity}
+        
+        <button class="btn btn-danger m-2">-</button>
+
+        </td>
+
+
+        <td>₹${item.price * item.quantity}</td>
+      </tr>
+    `;
+  });
+
+
+
+
+  const myModal = new bootstrap.Modal(
+    document.getElementById("exampleModal")
+  );
+
+  myModal.show();
+}
