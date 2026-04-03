@@ -139,11 +139,11 @@ products.forEach((p) => {
   `;
 });
 
- 
+
 
 function addToCart(id) {
   try {
-    
+
     let cartItems = JSON.parse(localStorage.getItem("cartdata")) || [];
 
     let product = cartItems.find((prod) => prod.id === id);
@@ -157,7 +157,7 @@ function addToCart(id) {
 
     localStorage.setItem("cartdata", JSON.stringify(cartItems));
 
- 
+
   } catch (error) {
     console.log(error);
   }
@@ -177,11 +177,11 @@ function ShowCart() {
         <td>
       
         <div class="d-flex ">
-          <button class="btn btn-success m-2">+</button>
+          <button class="btn btn-success m-2" onclick="increase(${item.id})">+</button>
 
        <p class="fs-3 m-2"> ${item.quantity}</p>
         
-        <button class="btn btn-danger m-2">-</button></div>
+        <button class="btn btn-danger m-2" onclick="decrease(${item.id})">-</button></div>
 
         </td>
 
@@ -190,7 +190,7 @@ function ShowCart() {
 
 
         <td>
-        <button class="btn btn-outline-danger m-2">Remove</button>
+        <button class="btn btn-outline-danger m-2" onclick="remove(${item.id})">Remove</button>
         </td>
 
 
@@ -198,7 +198,73 @@ function ShowCart() {
     `;
   });
 
-  const myModal = new bootstrap.Modal(document.getElementById("exampleModal"));
+  
 
+
+
+}
+
+function openCart(){
+  ShowCart();
+
+  const myModal = new bootstrap.Modal(document.getElementById("exampleModal"));
   myModal.show();
 }
+
+
+function increase(id) {
+
+  let data = JSON.parse(localStorage.getItem("cartdata"))
+
+  let item = data.find((p) => p.id === id)
+
+
+  if (item) {
+
+    item.quantity++;
+
+  }
+  localStorage.setItem("cartdata", JSON.stringify(data));
+
+
+  ShowCart()
+
+}
+
+function decrease(id) {
+
+  let data = JSON.parse(localStorage.getItem("cartdata")) || []
+
+  let item = data.find((p) => p.id === id)
+
+  if (item) {
+    item.quantity--;
+
+    if (item.quantity <= 0) {
+
+      data = data.filter((p) => p.id !== id)
+
+    }
+
+  }
+
+
+  localStorage.setItem("cartdata", JSON.stringify(data));
+
+
+  ShowCart()
+
+
+}
+
+function remove(id) {
+
+  let data = JSON.parse(localStorage.getItem("cartdata")) || []
+
+  data = data.filter((p) => p.id !== id)
+
+  localStorage.setItem("cartdata", JSON.stringify(data))
+
+  ShowCart()
+}
+
