@@ -22,3 +22,7 @@ body{
 .card img{
     border-radius: 20px 20px 0px 0px;
 }
+
+.modal-dialog{
+    min-width: fit-content;
+}

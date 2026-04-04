@@ -139,13 +139,10 @@ products.forEach((p) => {
   `;
 });
 
-
+let cartItems = JSON.parse(localStorage.getItem("cartdata")) || [];
 
 function addToCart(id) {
   try {
-
-    let cartItems = JSON.parse(localStorage.getItem("cartdata")) || [];
-
     let product = cartItems.find((prod) => prod.id === id);
 
     if (product) {
@@ -156,11 +153,11 @@ function addToCart(id) {
     }
 
     localStorage.setItem("cartdata", JSON.stringify(cartItems));
-
-
   } catch (error) {
     console.log(error);
   }
+
+  alert("product added");
 }
 
 function ShowCart() {
@@ -173,6 +170,11 @@ function ShowCart() {
   cart.forEach((item) => {
     tbody.innerHTML += `
       <tr>
+
+       
+        <td >  
+        <img src="${item.image}" class="img" width="60px" height="60px"; alt="${item.name}"
+        </td>
         <td>${item.name}</td>
         <td>
       
@@ -197,14 +199,9 @@ function ShowCart() {
       </tr>
     `;
   });
-
-  
-
-
-
 }
 
-function openCart(){
+function openCart() {
   ShowCart();
 
   const myModal = new bootstrap.Modal(document.getElementById("exampleModal"));
@@ -212,59 +209,38 @@ function openCart(){
 }
 
 
-function increase(id) {
 
-  let data = JSON.parse(localStorage.getItem("cartdata"))
+function update() {
+  localStorage.setItem("cartdata", JSON.stringify(cartItems));
 
-  let item = data.find((p) => p.id === id)
-
-
-  if (item) {
-
-    item.quantity++;
-
-  }
-  localStorage.setItem("cartdata", JSON.stringify(data));
-
-
-  ShowCart()
-
+  ShowCart();
 }
 
+function increase(id) {
+  const product = cartItems.find((p) => p.id === id);
+
+  if (product) {
+    product.quantity++;
+  }
+  update();
+}
+
+
 function decrease(id) {
+  const product = cartItems.find((p) => p.id === id);
 
-  let data = JSON.parse(localStorage.getItem("cartdata")) || []
-
-  let item = data.find((p) => p.id === id)
-
-  if (item) {
-    item.quantity--;
-
-    if (item.quantity <= 0) {
-
-      data = data.filter((p) => p.id !== id)
-
-    }
-
+  if (product) {
+    product.quantity--;
+  }
+  if (product.quantity <= 0) {
+    cartItems = cartItems.filter((p) => p.id !== id);
   }
 
-
-  localStorage.setItem("cartdata", JSON.stringify(data));
-
-
-  ShowCart()
-
-
+ update();
 }
 
 function remove(id) {
+  cartItems = cartItems.filter((a) => a.id !== id);
 
-  let data = JSON.parse(localStorage.getItem("cartdata")) || []
-
-  data = data.filter((p) => p.id !== id)
-
-  localStorage.setItem("cartdata", JSON.stringify(data))
-
-  ShowCart()
+  update();
 }
-
