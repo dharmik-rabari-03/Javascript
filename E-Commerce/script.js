@@ -1,4 +1,4 @@
-const products = [
+let products = [
   {
     id: 1,
     name: "Bluetooth Headphones",
@@ -122,22 +122,6 @@ const products = [
   },
 ];
 
-const productContainer = document.getElementById("product-list");
-
-products.forEach((p) => {
-  productContainer.innerHTML += `
-
-  <div class="card text-center " style="height:30rem">
-  <img src="${p.image}" class="card-img-top" width="100%" height="300px"; alt="${p.name}">
-  <div class="card-body">
-    <h5 class="card-title">${p.name}</h5>
-    <p class="card-text">₹${p.price}</p>
-    <button class="btn btn-primary" onclick="addToCart(${p.id})">Add To Cart</button>
-  </div>
-</div>
-
-  `;
-});
 
 let cartItems = JSON.parse(localStorage.getItem("cartdata")) || [];
 
@@ -156,6 +140,7 @@ function addToCart(id) {
   } catch (error) {
     console.log(error);
   }
+
 
   alert("product added");
 }
@@ -199,6 +184,9 @@ function ShowCart() {
       </tr>
     `;
   });
+
+  totalAmount()
+
 }
 
 function openCart() {
@@ -217,7 +205,7 @@ function update() {
 }
 
 function increase(id) {
-  const product = cartItems.find((p) => p.id === id);
+  let product = cartItems.find((p) => p.id === id);
 
   if (product) {
     product.quantity++;
@@ -227,7 +215,7 @@ function increase(id) {
 
 
 function decrease(id) {
-  const product = cartItems.find((p) => p.id === id);
+  let product = cartItems.find((p) => p.id === id);
 
   if (product) {
     product.quantity--;
@@ -236,7 +224,7 @@ function decrease(id) {
     cartItems = cartItems.filter((p) => p.id !== id);
   }
 
- update();
+  update();
 }
 
 function remove(id) {
@@ -244,3 +232,128 @@ function remove(id) {
 
   update();
 }
+
+
+
+function totalAmount(id) {
+
+  let total = cartItems.reduce((acc, curr) =>
+     acc + curr.price * curr.quantity, 0)
+
+  document.getElementById("total").innerHTML =`₹ ${total}`;
+
+
+
+}
+
+function checkout() {
+
+  if (cartItems.length > 0) {
+
+    alert("order placed")
+
+    cartItems = [];
+    update()
+
+  } else {
+    alert("no product in cart")
+  }
+}
+
+
+function addNewProduct() {
+
+  let name = document.getElementById("name").value;
+  let price = Number(document.getElementById("price").value);
+  let image = document.getElementById("img").value;
+
+  if (!name || !price || !image) {
+    alert("all field required");
+    return;
+  }
+
+  let newProduct = {
+    id: Date.now(),
+    name,
+    price,
+    image
+  };
+
+  products.push(newProduct);
+  localStorage.setItem("products", JSON.stringify(products));
+
+
+  displayProducts();
+
+  alert("Product Added");
+
+  let modal = bootstrap.Modal.getInstance(document.getElementById("exampleModal2"));
+  modal.hide();
+}
+
+function Delete(id){
+
+  products = products.filter((p) => p.id !== id);
+  localStorage.setItem("products", JSON.stringify(products));
+
+  displayProducts();
+}
+
+function openUpdateModal(){
+    const myModal = new bootstrap.Modal(document.getElementById("exampleModal3"));
+  myModal.show();
+}
+
+function newUpdate(id){
+
+  let product=products.find((p)=>p.id === id)
+
+   
+   let newName=document.getElementById("newName").value
+   let newPrice=Number(document.getElementById("newPrice").value)
+   let newImg=document.getElementById("newImg").value
+
+   if(!newName || !newPrice ||!newImg){
+    alert("all field are required")
+    return;
+   }
+
+    product.name = newName;
+  product.price = newPrice;
+  product.image = newImg;
+
+  localStorage.setItem("products", JSON.stringify(products));
+
+  displayProducts();
+
+
+}
+
+
+function displayProducts() {
+
+  let productContainer = document.getElementById("product-list");
+  productContainer.innerHTML = "";
+
+  products.forEach((p) => {
+    productContainer.innerHTML += `
+      <div class="card text-center" style="height:30rem">
+        <img src="${p.image}" class="card-img-top" height="300px">
+        <div class="card-body">
+          <h5>${p.name}</h5>
+          <p>₹${p.price}</p>
+
+          <button class="btn btn-primary" onclick="addToCart(${p.id})">
+            Add To Cart
+          </button>
+    <button class="btn btn-warning" onclick="openUpdateModal()">
+update          </button>
+          <button class="btn btn-danger" onclick="Delete(${p.id})">
+            Delete
+          </button>
+        </div>
+      </div>
+    `;
+  });
+}
+displayProducts();
