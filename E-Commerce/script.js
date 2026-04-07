@@ -341,16 +341,22 @@ function displayProducts() {
         <img src="${p.image}" class="card-img-top" height="300px">
         <div class="card-body">
           <h5>${p.name}</h5>
-          <p>₹${p.price}</p>
+          <p class="text-success h4">₹${p.price}</p>
 
-          <button class="btn btn-primary" onclick="addToCart(${p.id})">
+         <div class="mb-3 ">
+        
+    <button class="btn btn-outline-warning border-0" onclick="openUpdateModal()">
+✏️ Edit         </button>
+
+
+          <button class="btn btn-outline-danger border-0" onclick="Delete(${p.id})">
+            🗑️ Delete
+          </button>
+          
+            <button class="btn btn-outline-primary border-2 mt-2 w-75" onclick="addToCart(${p.id})">
             Add To Cart
           </button>
-    <button class="btn btn-warning" onclick="openUpdateModal()">
-update          </button>
-          <button class="btn btn-danger" onclick="Delete(${p.id})">
-            Delete
-          </button>
+          </div>
         </div>
       </div>
     `;
