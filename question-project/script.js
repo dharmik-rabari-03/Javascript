@@ -131,13 +131,13 @@ function nextqns() {
     Questions[qnsIndex].options.forEach((opt) => {
 
         let div = document.createElement("div");
-        div.classList.add("col-6", "mb-2");
+        div.classList.add("col-6");
 
         let btn = document.createElement("button");
         btn.innerText = opt;
 
-        btn.classList.add("p-2", "btn", "btn-outline-success", "w-100");
-        btn.style.minHeight = "60px";
+        btn.classList.add("p-2", "btn", "btn-option", "w-100");
+        btn.style.minHeight = "70px";
 
         div.appendChild(btn);
         optionsDiv.appendChild(div);
