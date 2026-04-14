@@ -82,6 +82,7 @@ let Questions = [
 let qnsIndexHTML = document.getElementById("qnsIndexHTML");
 let qnsTimer = document.getElementById("qnsTimer");
 let nextbtn = document.getElementById("nextbtn");
+let quizH1=document.getElementById("quizH1")
 
 let qnsIndex = 0;
 let score = 0;
@@ -146,6 +147,8 @@ function nextqns() {
 
 function showResult() {
   nextbtn.classList.add("d-none");
+
+  quizH1.innerHTML="Quiz Result"
 
   qns.innerHTML = `Your Score: ${score}/${Questions.length}
                     <br>
