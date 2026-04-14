@@ -152,6 +152,8 @@ function showResult() {
                     percentage : ${score / Questions.length * 100}%
                     `;
   optionsDiv.innerHTML = "";
+   qnsTimer.style.display="none"
+   clearInterval(interval);
 
   let qnsHTML = document.getElementById("qnsResult");
   qnsHTML.innerHTML = "";
@@ -199,7 +201,7 @@ function timer() {
 
     qnsTimer.innerHTML =`Time Left : ${TimerLeft}`;
 
-    if (TimerLeft === 0) {
+    if (TimerLeft < 0) {
       nextqns();
       selectedAnswer = null;
     }
