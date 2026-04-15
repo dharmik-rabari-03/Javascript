@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>quiz API</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+
+    <div class="container">
+        <div class="card p-4 text-center">
+            <h1 id="quizH1">Quiz Application</h1>
+            <br>
+            <div class="d-flex justify-content-between">
+                <h5 id="qnsIndexHTML">qns 1/4</h5>
+                <h5 class="text-danger" id="qnsTimer">30</h5>
+            </div>
+            <br>
+            <br>
+
+            <div id="qnsDiv" class="text-center">
+                <h3 id="qns" class="text-center mb-4">questions</h3>
+            </div>
+
+            <div id="options" class="row g-2 p-3"></div>
+
+            <br>
+
+            <div class="d-flex flex-wrap align-item-center justify-content-center">
+                <button class="btn btn-primary w-50 d-flex justify-content-center" id="nextbtn" onclick="nextQns()">
+                    <span class="text">N E X T</span>
+                </button>
+            </div>
+
+            <div id="qnsResult">
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
