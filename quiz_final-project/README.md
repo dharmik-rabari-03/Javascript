@@ -24,27 +24,8 @@ A simple and interactive Quiz Application built using **HTML, CSS, and JavaScrip
 
 
 
-## ⚙️ How It Works
-
-1. The quiz starts automatically when the page loads.
-2. Each question is displayed with four options.
-3. When a user selects an answer:
-
-   * It is recorded
-   * The app automatically moves to the next question
-4. After all questions are answered:
-
-   * Final score is displayed
-   * Correct answers for all questions are shown
-
----
-
-## 📊 Scoring System
-
-* Each correct answer = **1 point**
-* Total score is calculated at the end of the quiz
-
----
+live link :
+https://quiz-project0303.netlify.app/
 
 ## 🛠️ Technologies Used
 
