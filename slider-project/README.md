@@ -11,7 +11,9 @@ This project automatically cycles through images and also allows manual navigati
 
 ---
 ## 🚀 IMAGE
+**1.**
 <img width="1851" height="895" alt="image" src="https://github.com/user-attachments/assets/983fcc41-ee8f-4cd6-850b-0cf908eab000" />
+**2.**
 <img width="1810" height="887" alt="image" src="https://github.com/user-attachments/assets/4517ba35-0593-4376-ab0a-f92dd554aa1e" />
 
 
