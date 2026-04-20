@@ -7,8 +7,8 @@ A simple and interactive web application to learn and test JavaScript array meth
 ---
 
 **IMAGE**
+<img width="1911" height="894" alt="image" src="https://github.com/user-attachments/assets/d8f0d38a-a3e0-45fb-853f-1f9da68b9d78" />
 
-<img width="1911" height="932" alt="image" src="https://github.com/user-attachments/assets/f5555082-f0d6-4315-8bf1-a58d1ebfabff" />
 
 
 ## 🚀 Features
