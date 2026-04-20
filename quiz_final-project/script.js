@@ -15,7 +15,6 @@ let Questions = [
     question: "Which CSS property is used to change text color?",
     options: ["font-color", "text-color", "color", "background-color"],
     correctIndex: 2,
-
   },
   {
     id: 3,
@@ -78,9 +77,8 @@ let Questions = [
   },
 ];
 
-let QuizH1 = document.getElementById("QuizH1");
 let qnsIndex = document.getElementById("qnsIndex");
-let timer = document.getElementById("timer");
+let qnsTimer = document.getElementById("timer");
 let qns = document.getElementById("qns");
 let option = document.getElementById("option");
 let nextbtn = document.getElementById("btn");
@@ -92,20 +90,25 @@ let index = 0;
 let time = 0;
 let score = 0;
 let userAns = [];
+let interval;
 
 function loadQNS() {
   selectedANS = null;
+  startTimer();
 
-  qns.innerHTML = `${index + 1}.${Questions[index].question}`;
+  qns.innerHTML = `${index + 1}. ${Questions[index].question}`;
+  qnsIndex.innerHTML = `Qns ${index + 1}/${Questions.length}`;
 
-  option.innerText = "";
-  Questions[index].options.forEach((opt, index) => {
+  option.innerHTML = "";
+
+  Questions[index].options.forEach((opt, i) => {
     let btn = document.createElement("button");
     btn.innerText = opt;
     btn.classList.add("btn", "btn-outline-warning", "w-100", "m-1");
 
     btn.addEventListener("click", () => {
-      selectedANS = index;
+      clearInterval(interval);
+      selectedANS = i;
       nextQNS();
     });
 
@@ -119,11 +122,10 @@ function nextQNS() {
   if (selectedANS === Questions[index].correctIndex) {
     score++;
   }
+
   index++;
 
   if (index < Questions.length) {
-    qnsIndex.innerHTML = `qns ${index + 1}/${Questions.length}`;
-
     loadQNS();
   } else {
     result();
@@ -133,22 +135,54 @@ function nextQNS() {
 function result() {
   option.style.display = "none";
   nextbtn.style.display = "none";
+  qnsTimer.style.display = "none";
 
-  qns.innerHTML = `score ${score}`;
+  qns.innerHTML = `Your Score: ${score}`;
 
-  Questions.forEach((qns, index) => {
-    let Qnsshow = document.createElement("h1");
-    Qnsshow.innerHTML = `${index + 1}.${Questions[index].question}`;
+  Questions.forEach((q, i) => {
+    let Qnsshow = document.createElement("h3");
+    Qnsshow.innerHTML = `${i + 1}. ${q.question}`;
 
     let correctAnswer = document.createElement("p");
-    correctAnswer.innerText = `correct Ans : ${Questions[index].options[Questions[index].correctIndex]}`;
+    correctAnswer.innerText =
+      `Correct Ans: ${q.options[q.correctIndex]}`;
 
-   
-   
+    let userAnswer = document.createElement("p");
+
+    if (userAns[i] !== null) {
+      userAnswer.innerText =
+        `Your Ans: ${q.options[userAns[i]]}`;
+    } else {
+      userAnswer.innerText = "Your Ans: Not Answered";
+    }
+
+    if (userAns[i] === q.correctIndex) {
+      userAnswer.style.color = "lightgreen";
+    } else {
+      userAnswer.style.color = "red";
+    }
 
     results.appendChild(Qnsshow);
     results.appendChild(correctAnswer);
-    
+    results.appendChild(userAnswer);
   });
 }
+
+function startTimer() {
+  clearInterval(interval);
+  time = 30;
+
+  qnsTimer.innerHTML = `Time Left : ${time}`;
+
+  interval = setInterval(() => {
+    time--;
+    qnsTimer.innerHTML = `Time Left : ${time}`;
+
+    if (time === 0) {
+      selectedANS = null;
+      nextQNS();
+    }
+  }, 1000);
+}
+
 loadQNS();
