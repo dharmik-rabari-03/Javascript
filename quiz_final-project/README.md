@@ -40,7 +40,6 @@ https://quiz-project0303.netlify.app/
 
 ---
 <img width="959" height="646" alt="image" src="https://github.com/user-attachments/assets/7652428f-d7dc-4db9-a667-aff5ef6ccd1a" />
-<img width="1724" height="888" alt="image" src="https://github.com/user-attachments/assets/67384abe-87d3-47df-836f-f7e77533b811" />
 
 
 
