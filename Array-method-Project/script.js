@@ -8,7 +8,7 @@ btn.addEventListener("click", function () {
   let arrInput = document.getElementById("array").value;
   let arr = arrInput.split(",").map(Number);
 
-  let value = Number(input.value);
+  let value = (input.value);
   let method = select.value;
 
   let output;
