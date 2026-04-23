@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(165, 214, 163);
+}
+
+#product {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px;
+}
+
+.card {
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+img {
+    height: 300px;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.596);
+    backdrop-filter: blur(10px);
+    width: 90%;
+    border-radius: 10px;
+}
