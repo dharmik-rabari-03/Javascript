@@ -4,14 +4,7 @@
 
 **img :**
 
-<img width="1896" height="939" alt="image" src="https://github.com/user-attachments/assets/061413f7-2252-4742-a7e2-6cfb89104c4d" />
-
-**img 2**
-
-
-
-<img width="1734" height="672" alt="image" src="https://github.com/user-attachments/assets/04b20db7-4034-46d2-8751-bc6af5bcd9c2" />
-
+<img width="1903" height="940" alt="image" src="https://github.com/user-attachments/assets/8432a70c-8bd5-423a-bb69-a8a6998afbad" />
 
 
 📌 Project Overview
