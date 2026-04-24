@@ -13,34 +13,43 @@
 <body>
 
 
-   <div class="container-fluid d-flex justify-content-center"  >
-     <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">easyProduct</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav m-auto p-2">
-                    <li class="nav-item">
-                        <button class="btn btn-outline-success " aria-current="page" href="#" onclick="AddProduct()">Add
-                            Product</button>
-                    </li>
-                    <li class="nav-item">
-                        <button class="btn btn-outline-success" onclick="AddToList()">Cart</button>
-                    </li>
+    <div class="container-fluid d-flex justify-content-center">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">easyProduct</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto p-2 d-flex gap-3">
+                        <li class="nav-item">
+                            <button class="btn btn-outline-success" onclick="cart()">Cart</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-outline-success " aria-current="page" href="#"
+                                onclick="AddProduct()">Add
+                                Product</button>
+                        </li>
+                        <li>
+                            <select name="" id="select" class="btn btn-outline-success">
+                                <option value="">Sort By Price</option>
+                                <option value="low">Price : Low To High</option>
+                                <option value="High">Price : High To Low</option>
+                            </select>
+                        </li>
 
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput" />
+                        
+                    </form>
+                </div>
             </div>
-        </div>
-    </nav>
-   </div>
+        </nav>
+    </div>
 
     <div class="container">
 
@@ -136,20 +145,28 @@
                             <thead>
                                 <tr>
                                     <th scope="col">No.</th>
+                                    <th scope="col">Img</th>
                                     <th scope="col">Product</th>
                                     <th scope="col">Price</th>
                                     <th scope="col">Delete</th>
                                 </tr>
                             </thead>
                             <tbody id="tbody2">
-                               
+
+
                             </tbody>
                         </table>
 
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    <div class="modal-footer d-flex justify-content-between">
+                        <div>
+                            <p id="totalPrice"></p>
+                        </div>
+
+                        <div>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary" onclick="PlaceOrder()">Save changes</button>
+                        </div>
                     </div>
 
                 </div>

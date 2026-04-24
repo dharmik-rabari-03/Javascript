@@ -162,7 +162,7 @@ function ShowProduct() {
                 </div>
                 <div>
                 <div class="d-flex justify-content-center mb-3">
-                <button class="btn btn-outline-success" onclick="alerts()">Add To cart</button>
+                <button class="btn btn-outline-success" onclick="AddToCart(${p.id})">Add To cart</button>
                 <button class="btn btn-outline-danger" onclick="Deletes(${p.id})">Delete</button>
                 <button class="btn btn-outline-warning" onclick="update(${p.id})">Edit</button>
              
@@ -171,6 +171,7 @@ function ShowProduct() {
 
     `;
   });
+  index++;
 }
 ShowProduct();
 
@@ -198,12 +199,13 @@ function update(id) {
     let image = document.getElementById("Newimg").value;
 
     products[findIndex] = {
-      ...products,
+      ...products[findIndex],
       name: Newname,
       price: NewPrice,
       image: image,
     };
     modal.hide();
+   
 
     ShowProduct();
   };
@@ -230,22 +232,158 @@ function AddProduct() {
 
     products.push(newProduct);
     modal.hide();
+    form2.reset()
 
     ShowProduct();
   };
 }
 
-function AddToList() {
+let cartItems = JSON.parse(localStorage.getItem("cartData")) || [];
+
+function AddToCart(id) {
+  alert("product Add");
+
+  let product = cartItems.find((prod) => prod.id === id);
+
+  if (product) {
+    product.quantity++;
+  } else {
+    let findproduct = products.find((prod) => prod.id === id);
+    cartItems.push({ ...findproduct, quantity: 1 });
+  }
+  localStorage.setItem("cartData", JSON.stringify(cartItems));
+}
+
+function cart() {
   let modal = new bootstrap.Modal(document.getElementById("modal3"));
   modal.show();
-
+  cartItems = JSON.parse(localStorage.getItem("cartData")) || [];
   let tbody2 = document.getElementById("tbody2");
-
   tbody2.innerHTML = "";
 
- 
+  cartItems.forEach((item, i) => {
+    tbody2.innerHTML += `
+    <tr class="text-center">
+      <td>${i + 1}</td>
+      <td><img src="${item.image}" class="cartImg"></td>
+      <td>${item.name}</td>
+      <td>${item.price * item.quantity}</td>
+      <td class="d-flex gap-2">
+      <button class="btn btn-outline-success" onclick="increase(${item.id})">+</button>
+      ${item.quantity}
+      <button class="btn btn-outline-danger" onclick="decrease(${item.id})">-</button>
+      </td>
+      <td><button class="btn btn-outline-danger" onclick="DeleteCartItems(${item.id})">Delete</button></td>
+    </tr>
+    `;
+  });
+  TotalPrice();
 }
 
-function alerts(){
-    alert("product Add")
+function increase(id) {
+  let product = cartItems.find((prod) => prod.id === id);
+
+  if (product) {
+    product.quantity++;
+  }
+  localStorage.setItem("cartData", JSON.stringify(cartItems));
+  cart();
 }
+
+function decrease(id) {
+  let product = cartItems.find((p) => p.id === id);
+
+  if (product) {
+    if (product.quantity > 1) {
+      product.quantity--;
+    } else {
+      cartItems = cartItems.filter((p) => p.id !== id);
+    }
+  }
+  localStorage.setItem("cartData", JSON.stringify(cartItems));
+
+  cart();
+}
+
+function DeleteCartItems(id) {
+  let product = cartItems.find((p) => p.id === id);
+
+  if (product) {
+    cartItems = cartItems.filter((p) => p.id !== id);
+  }
+
+  localStorage.setItem("cartData", JSON.stringify(cartItems));
+
+  cart();
+}
+
+function PlaceOrder() {
+  if (cartItems.length > 0) {
+    alert("Order Placed");
+    cartItems = [];
+  } else {
+    alert("Cart is empty");
+  }
+
+  localStorage.setItem("cartData", JSON.stringify(cartItems));
+
+  cart();
+}
+function TotalPrice() {
+  let totalPrice = document.getElementById("totalPrice");
+
+  let total = cartItems.reduce(
+    (acc, curr) => acc + curr.price * curr.quantity,
+    0,
+  );
+
+  totalPrice.innerHTML = `Total Amount ₹${total}`;
+}
+
+let select = document.getElementById("select");
+
+select.addEventListener("click", () => {
+  let type = select.value;
+
+  if (type === "low") {
+    products.sort((a, b) => a.price - b.price);
+  } else if (type === "High") {
+    products.sort((a, b) => b.price - a.price);
+  }
+  ShowProduct(products);
+});
+
+let searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("input", function () {
+  let value = searchInput.value.toLowerCase();
+
+  let filter = products.filter((p) => p.name.toLowerCase().includes(value));
+
+  productCard.innerHTML = "";
+
+  filter.forEach((p) => {
+    productCard.innerHTML += `
+    
+     <div class="card">
+                <div class="img">
+                    <img src="${p.image}" alt="">
+                </div>
+                  <div class="name">
+                    <p>${p.name}</p>
+                </div>
+                  <div class="price">
+                    <p>${p.price}</p>
+                </div>
+                <div>
+                <div class="d-flex justify-content-center mb-3">
+                <button class="btn btn-outline-success" onclick="AddToCart(${p.id})">Add To cart</button>
+                <button class="btn btn-outline-danger" onclick="Deletes(${p.id})">Delete</button>
+                <button class="btn btn-outline-warning" onclick="update(${p.id})">Edit</button>
+             
+                </div>
+            </div>
+
+    `;
+  });
+});
