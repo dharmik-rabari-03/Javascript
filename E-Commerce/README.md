@@ -40,5 +40,5 @@ Event Handling
 Local Storage (if used)
 Dynamic Rendering
 
-Author
-Dharmik
+👨‍💻 Author
+Dharmik Rabari
