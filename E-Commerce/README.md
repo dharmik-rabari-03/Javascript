@@ -1,6 +1,6 @@
 📦 ShopEasy – Modern E-Commerce Web App
 
-A fully functional and responsive E-Commerce Web Application built using Vanilla JavaScript.
+A fully functional and responsive E-Commerce Web Application built using JavaScript.
 This project showcases real-world shopping features like product management, cart system, and dynamic UI updates.
 
 🌐 Live Demo
